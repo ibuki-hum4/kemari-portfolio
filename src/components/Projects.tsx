@@ -17,7 +17,7 @@ const projects: Project[] = [
     id: 1,
     title: 'ポートフォリオサイト',
     description: 'Next.js と Tailwind CSS で構築したモダンなポートフォリオ。(このサイト)',
-    image: '/projects/portfolio.png',
+    image: '/portfolio.png',
     githubUrl: '',
     liveUrl: '',
   },
