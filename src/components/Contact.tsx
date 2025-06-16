@@ -21,7 +21,7 @@ export default function Contact() {
       </p>
       <div className="flex justify-center gap-10 text-lg">
         <a
-          href="https://twitter.com/your_twitter_handle"
+          href="https://x.com/Yaaaaahari"
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-500 hover:text-blue-700 transition-colors duration-300"
@@ -38,7 +38,7 @@ export default function Contact() {
           <span className="ml-2 align-middle">X (Twitter) DM</span>
         </a>
         <a
-          href="mailto:your.email@example.com"
+          href="mailto:tyatora.info@gmail.com"
           className="text-red-500 hover:text-red-700 transition-colors duration-300"
           aria-label="Email"
         >

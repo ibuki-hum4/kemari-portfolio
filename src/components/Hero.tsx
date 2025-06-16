@@ -2,6 +2,21 @@
 import { motion } from "framer-motion";
 
 export default function Hero() {
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const target = document.getElementById("about");
+    if (target) {
+      const headerOffset = 80; // ヘッダーの高さ分を考慮
+      const elementPosition = target.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <section className="relative min-h-[70vh] flex flex-col justify-center items-center text-center px-6 overflow-hidden rounded-3xl shadow-2xl">
       {/* 境界ぼかし用の外側グラデーション */}
@@ -40,13 +55,30 @@ export default function Hero() {
       {/* CTAボタン */}
       <motion.a
         href="#about"
-        className="mt-10 inline-block px-8 py-3 rounded-full bg-white/30 backdrop-blur-md border border-white/30 text-lg font-bold text-purple-900 shadow-xl hover:bg-white/40 transition"
-        whileHover={{ scale: 1.08, boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)" }}
+        onClick={handleScroll}
+        className="mt-10 inline-block px-8 py-3 rounded-full bg-white/30 backdrop-blur-md border border-white/30 text-lg font-bold text-purple-900 shadow-xl hover:bg-white/40 transition group"
+        whileHover={{
+          scale: 1.08,
+          boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
+        }}
         initial={{ opacity: 0, scale: 0.7 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 1.4, type: "spring" }}
       >
-        もっと見る
+        <span className="inline-flex items-center group-hover:translate-y-1 transition-transform duration-300">
+          もっと見る
+          <svg
+            className="ml-2 w-5 h-5 animate-bounce"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+          </svg>
+        </span>
       </motion.a>
     </section>
   );

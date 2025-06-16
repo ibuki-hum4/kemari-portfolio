@@ -6,7 +6,7 @@ export default function Footer() {
 
         <div className="flex gap-6 mt-4 md:mt-0">
           <a
-            href="https://twitter.com/your_twitter_id"
+            href="https://x.com/Yaaaaahari"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Twitter"
@@ -22,7 +22,7 @@ export default function Footer() {
             </svg>
           </a>
           <a
-            href="mailto:your.email@example.com"
+            href="mailto:tyatora.info@gmail.com"
             aria-label="Email"
             className="hover:text-gray-900 transition"
           >
