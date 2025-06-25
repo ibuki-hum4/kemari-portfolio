@@ -16,6 +16,8 @@ const skills = [
   { name: 'GitHub', icon: 'github' },
   { name: 'cloudflare', icon: 'cloudflare' },
   { name: 'Discord.js', icon: 'discordjs' },
+  { name: 'Docker', icon: 'docker' },
+  { name: 'K8s', icon: 'kubernetes' },
 ]
 
 export default function Skills() {
