@@ -34,7 +34,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-16 bg-white px-4 md:px-20"
+      className="glass rounded-[40px] shadow-glass backdrop-blur-2xl py-16 px-4 md:px-20 my-20"
     >
       <h2
         className="text-4xl font-bold mb-12
@@ -48,9 +48,7 @@ export default function Projects() {
         {projects.map(({ id, title, description, image, githubUrl, liveUrl }) => (
           <div
             key={id}
-            className="bg-white rounded-xl overflow-hidden border border-gray-200
-                       shadow-sm hover:shadow-lg transition-shadow duration-300
-                       transform hover:scale-[1.02] flex flex-col"
+            className="glass rounded-[40px] shadow-glass backdrop-blur-2xl bg-white/70 dark:bg-gray-900/70 overflow-hidden border border-gray-200 flex flex-col hover:shadow-lg transition-shadow duration-300 transform hover:scale-[1.02]"
           >
             {image && (
               <img

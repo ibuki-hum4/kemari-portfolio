@@ -42,7 +42,7 @@ const blogPosts: BlogPost[] = [
 
 export default function Blog() {
   return (
-    <section id="blog" className="bg-white dark:bg-black px-6 py-20">
+    <section id="blog" className="glass rounded-[40px] shadow-glass backdrop-blur-2xl px-6 py-20 my-20">
       <h2 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-transparent bg-clip-text">
         Blog
       </h2>
@@ -52,7 +52,7 @@ export default function Blog() {
             <Link
               key={post.id}
               href={post.url}
-              className="block p-6 rounded-xl border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl transition-shadow bg-white dark:bg-gray-900"
+              className="block p-6 rounded-[40px] border border-gray-200 dark:border-gray-700 shadow-glass glass backdrop-blur-2xl bg-white/70 dark:bg-gray-900/70 transition-shadow hover:shadow-lg"
             >
               <h3 className="text-xl font-semibold mb-2">{post.title}</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-4">

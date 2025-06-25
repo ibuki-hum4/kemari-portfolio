@@ -21,7 +21,7 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-16 bg-white text-center">
+    <section id="skills" className="glass rounded-[40px] shadow-glass backdrop-blur-2xl py-16 my-20 text-center">
       <h2 className="text-4xl font-bold mb-10 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent animate-gradient-x">
         Skills
       </h2>
@@ -29,12 +29,12 @@ export default function Skills() {
         {skills.map(({ name, icon }) => (
           <div
             key={name}
-            className="group relative w-20 h-20 cursor-pointer transition-transform duration-300 hover:scale-110"
+            className="group relative w-20 h-20 rounded-[40px] shadow-glass backdrop-blur-2xl cursor-pointer transition-transform duration-300 hover:scale-110 bg-transparent"
           >
             <img
               src={`https://skillicons.dev/icons?i=${icon}`}
               alt={name}
-              className="w-full h-full"
+              className="w-full h-full bg-transparent"
               draggable={false}
             />
             <span

@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-white border-t border-gray-200 py-6 mt-16">
+    <footer className="glass rounded-[40px] shadow-glass backdrop-blur-2xl bg-white border-t border-gray-200 py-6 mt-16">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-gray-600 text-sm">
         <p>© {new Date().getFullYear()} けまり. All rights reserved.</p>
 

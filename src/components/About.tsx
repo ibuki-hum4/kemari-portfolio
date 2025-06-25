@@ -2,7 +2,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="glass max-w-5xl mx-auto my-20 p-10 text-gray-900"
+      className="glass rounded-[40px] shadow-glass backdrop-blur-2xl max-w-5xl mx-auto my-20 p-10 text-gray-900"
     >
       <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-500 to-indigo-500 bg-clip-text text-transparent">
         About Me

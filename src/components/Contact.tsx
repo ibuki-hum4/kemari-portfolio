@@ -7,7 +7,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-16 bg-white px-4 md:px-20 text-center"
+      className="glass rounded-[40px] shadow-glass backdrop-blur-2xl py-16 px-4 md:px-20 text-center my-20"
     >
       <h2
         className="text-4xl font-bold mb-8
