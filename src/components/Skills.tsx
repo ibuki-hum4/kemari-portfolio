@@ -10,7 +10,6 @@ const skills = [
   { name: 'Next.js', icon: 'nextjs' },
   { name: 'Tailwind CSS', icon: 'tailwindcss' },
   { name: 'HTML', icon: 'html' },
-  { name: 'CSS', icon: 'css' },
   { name: 'Node.js', icon: 'nodejs' },
   { name: 'Git', icon: 'git' },
   { name: 'GitHub', icon: 'github' },
