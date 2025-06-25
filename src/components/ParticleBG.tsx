@@ -76,7 +76,7 @@ export default function ParticleBG() {
       const mx = e.clientX;
       const my = e.clientY;
       for (let i = 0; i < PARTICLE_NUM; i++) {
-        let p = particles[i];
+        const p = particles[i];
         const dx = mx - p.x;
         const dy = my - p.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
