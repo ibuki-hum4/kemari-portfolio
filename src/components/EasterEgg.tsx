@@ -12,21 +12,22 @@ const EGG_MESSAGES = [
 ];
 
 export default function EasterEgg() {
-  const [input, setInput] = useState<string[]>([]);
   const [showEgg, setShowEgg] = useState(false);
   const [message, setMessage] = useState("");
 
   useEffect(() => {
+    let eggInput = "";
     const onKeyDown = (e: KeyboardEvent) => {
-      setInput((prev) => {
-        const next = [...prev, e.key.toLowerCase()].slice(-SECRET_CODE.length);
-        if (next.join("") === SECRET_CODE.join("")) {
-          setShowEgg(true);
-          setMessage(EGG_MESSAGES[Math.floor(Math.random() * EGG_MESSAGES.length)]);
-          setTimeout(() => setShowEgg(false), 5000);
-        }
-        return next;
-      });
+      eggInput += e.key.toLowerCase();
+      if (eggInput.length > SECRET_CODE.length) {
+        eggInput = eggInput.slice(-SECRET_CODE.length);
+      }
+      if (eggInput === SECRET_CODE.join("")) {
+        setShowEgg(true);
+        setMessage(EGG_MESSAGES[Math.floor(Math.random() * EGG_MESSAGES.length)]);
+        setTimeout(() => setShowEgg(false), 5000);
+        eggInput = "";
+      }
     };
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);

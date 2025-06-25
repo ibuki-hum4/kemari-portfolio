@@ -1,6 +1,5 @@
 // src/app/layout.tsx
 import "@/styles/globals.css"
-import type { Metadata } from "next"
 import PageTransition from "@/components/PageTransition"
 import React from "react"
 import ParticleBG from "@/components/ParticleBG"

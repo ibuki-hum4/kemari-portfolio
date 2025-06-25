@@ -19,7 +19,6 @@ const messages = [
 
 export default function CountdownSection() {
   const [now, setNow] = useState(new Date());
-  const [birthday, setBirthday] = useState(getNextBirthday(new Date()));
   const [diff, setDiff] = useState(0);
   const [showConfetti, setShowConfetti] = useState(false);
   const [message, setMessage] = useState(messages[0]);
@@ -29,7 +28,6 @@ export default function CountdownSection() {
       const current = new Date();
       setNow(current);
       const nextBD = getNextBirthday(current);
-      setBirthday(nextBD);
       setDiff(nextBD.getTime() - current.getTime());
     }, 1000);
     return () => clearInterval(timer);

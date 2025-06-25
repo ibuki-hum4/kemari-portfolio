@@ -15,7 +15,7 @@ export default function ParticleBG() {
     canvas.width = width;
     canvas.height = height;
 
-    let particles: { x: number; y: number; vx: number; vy: number; size: number; color: string }[] = [];
+    const particles: { x: number; y: number; vx: number; vy: number; size: number; color: string }[] = [];
     const colors = ["#0ea5e9", "#f43f5e", "#fff", "#a78bfa", "#f472b6"];
     const PARTICLE_NUM = 60;
 
@@ -61,7 +61,7 @@ export default function ParticleBG() {
 
     function animate() {
       for (let i = 0; i < PARTICLE_NUM; i++) {
-        let p = particles[i];
+        const p = particles[i];
         p.x += p.vx;
         p.y += p.vy;
         if (p.x < 0 || p.x > width) p.vx *= -1;
