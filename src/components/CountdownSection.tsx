@@ -44,6 +44,11 @@ export default function CountdownSection() {
 
   const isBirthday = days === 0 && hours === 0 && minutes === 0 && seconds === 0;
 
+  const birthday = getNextBirthday(now);
+  const lastBirthday = new Date(birthday.getFullYear() - 1, 10, 9, 0, 0, 0);
+  const total = birthday.getTime() - lastBirthday.getTime();
+  const progress = 1 - diff / total;
+
   useEffect(() => {
     if (isBirthday) {
       setShowConfetti(true);
@@ -59,6 +64,20 @@ export default function CountdownSection() {
       </h2>
       <div className="font-mono text-gray-900 dark:text-gray-100 mb-4">
         現在時刻: {now.toLocaleString("ja-JP", { hour12: false })}
+      </div>
+      <div className="mb-6">
+        <div className="w-full h-4 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+          <div
+            className="h-4 bg-gradient-to-r from-primary via-accent to-primary transition-all duration-500"
+            style={{ width: `${(progress * 100).toFixed(2)}%` }}
+            aria-valuenow={Math.floor(progress * 100)}
+            aria-valuemin={0}
+            aria-valuemax={100}
+          />
+        </div>
+        <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">
+          誕生日までの進捗: <span className="font-bold">{(progress * 100).toFixed(2)}%</span>
+        </div>
       </div>
       <div className="mb-4 text-base text-gray-700 dark:text-gray-200 italic animate-pulse">
         {message}
