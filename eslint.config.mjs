@@ -20,6 +20,12 @@ const eslintConfig = [
       "next-env.d.ts",
     ],
   },
+  {
+    rules: {
+      // 外部CDN画像（Simple Icons, Skill Icons）は<img>を許可
+      "@next/next/no-img-element": "off",
+    },
+  },
 ];
 
 export default eslintConfig;
